@@ -1,0 +1,30 @@
+{
+  "overwrite": true,
+  "schema": "src/schema/schemaDefs/**/*.ts",
+  "config": {
+    "typesPrefix": "I",
+    "scalars": {
+      "Date": "Date"
+    },
+    "strictScalars": true,
+    "emitLegacyCommonJSImports": false
+  },
+  "generates": {
+    "src/generated/schema.mts": {
+      "plugins": ["typescript", "typescript-resolvers"],
+      "config": {
+        "defaultMapper": "Partial<{T}>"
+      }
+    },
+    "src/generated/schema.graphql": {
+      "plugins": ["schema-ast"],
+      "config": {
+        "federation": true,
+        "includeDirectives": true
+      }
+    }
+  },
+  "hooks": {
+    "afterOneFileWrite": ["prettier --write"]
+  }
+}

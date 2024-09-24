@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": ["src/utils/*"],
+      "@resolvers/*": ["src/resolvers/*"],
+      "@middleware/*": ["src/middleware/*"],
+      "@schema/*": ["src/schema/*"],
+      "@directives/*": ["src/directives/*"],
+      "@scalars/*": ["src/scalars/*"],
+      "@services/*": ["src/services/*"],
+      "@src/*": ["src/*"]
+    },
+    "lib": ["ESNext"],
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "useUnknownInCatchVariables": false,
+    "allowJs": true,
+    "maxNodeModuleJsDepth": 10,
+    "noEmit": true
+  },
+  "include": ["src/**/*", "build.mts"],
+  "ts-node": {
+    "files": true
+  }
+}
