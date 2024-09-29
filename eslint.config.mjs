@@ -49,6 +49,7 @@ export default [
         },
       ],
       'no-console': 'error',
+      '@typescript-eslint/no-empty-object-type': 'off',
     },
   },
 ];
